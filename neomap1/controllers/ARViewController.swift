@@ -25,6 +25,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     
     // define notification control signals
     var toReact: Bool! = false
+    var hasReacted: Bool! = false
     
     // define firebase database instance
     let db = Firestore.firestore()
@@ -110,9 +111,6 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
 
         var simpleMaterial = SimpleMaterial()
         
-        
-        //let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        //let imageURL = documents.appendingPathComponent("placeholder")
         var documentsUrl: URL {
             return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         }
@@ -129,7 +127,9 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
             print("Unable to Write Data to Disk (\(error))")
         }
         
-        
+        likeEntity = posterAnchor.findEntity(named: "like")
+        giftEntity = posterAnchor.findEntity(named: "gift")
+        dislikeEntity = posterAnchor.findEntity(named: "dislike")
         
         let myMesh: MeshResource = .generatePlane(width: 0.2, depth: 0.2, cornerRadius: 0.01)
 
@@ -206,6 +206,10 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
         var thumbTip: CGPoint?
         var indexTip: CGPoint?
         var ringTip: CGPoint?
+        
+        let width = screenSize.width
+        let height = screenSize.height
+        
         counter += 1
         
         let handler = VNImageRequestHandler(cvPixelBuffer: frame.capturedImage, orientation: .up, options: [:])
@@ -236,7 +240,39 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                     toReact = true
                     // show up all the commenting signs
                     posterAnchor.notifications.showLikeSign.post()
-                    print("width: \(screenSize.height)")
+                    
+                }
+                
+                let likePosition = SIMD3<Float>(
+                    likeEntity.position.x,
+                    likeEntity.position.y,
+                    likeEntity.position.z
+                )
+                
+                let giftPosition = SIMD3<Float>(
+                    giftEntity.position.x,
+                    giftEntity.position.y,
+                    giftEntity.position.z
+                )
+                
+                let dislikePosition = SIMD3<Float>(
+                    dislikeEntity.position.x,
+                    dislikeEntity.position.y,
+                    dislikeEntity.position.z
+                )
+                
+                
+                
+                // user ready to add their reactions
+                if toReact {
+                    let thumbX = thumbTipPoint.location.x
+                    let indexX = indexTipPoint.location.y
+                    
+                    if thumbX > indexX + 0.2 {
+                        print("like")
+                    } else {
+                        print("dislike")
+                    }
                     
                 }
                 
