@@ -18,6 +18,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     var latitude: Double!
     var longitude: Double!
     
+    var earth: Entity!
     // define screen resolution
     //  define screen size
     let screenSize: CGRect = UIScreen.main.bounds
