@@ -35,7 +35,9 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     var configuration = ARWorldTrackingConfiguration()
     var posterAnchor: Poster.Scene!
     
-    
+    var likeCounts: Int! = 0
+    var disLikeCounts: Int! = 0
+    var giftCounts: Int! = 0
     
     @IBOutlet var arView: ARView!
     
@@ -266,14 +268,22 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                 // user ready to add their reactions
                 if toReact {
                     let thumbX = thumbTipPoint.location.x
-                    let indexX = indexTipPoint.location.y
+                    let indexX = indexTipPoint.location.x
                     
-                    if thumbX > indexX + 0.2 {
-                        print("like")
+                    if thumbX < indexX {
+                        likeCounts += 1
                     } else {
                         print("dislike")
+                        disLikeCounts += 1
                     }
-                    
+                    if likeCounts == 5 {
+                        likeCounts = 0
+                        print("like")
+                    }
+                    if disLikeCounts == 5 {
+                        disLikeCounts = 0
+                        print("dislike")
+                    }
                 }
                 
                 thumbTip = CGPoint(x: thumbTipPoint.location.x, y: 1 - thumbTipPoint.location.y)
