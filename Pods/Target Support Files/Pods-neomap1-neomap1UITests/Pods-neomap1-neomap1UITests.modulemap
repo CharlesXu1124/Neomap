@@ -1,0 +1,6 @@
+framework module Pods_neomap1_neomap1UITests {
+  umbrella header "Pods-neomap1-neomap1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
