@@ -41,7 +41,7 @@
                                           "reversed" : false,
                                           "reverses" : false,
                                           "target" : [
-                                            "7477E312-7328-4C7E-A705-91A2C00F4B3E"
+
                                           ]
                                         },
                                         "name" : {
@@ -556,112 +556,7 @@
                       ]
                     }
                   },
-                  "9906A27D-01EA-453B-ABEA-3CAAAE8DF0EF" : {
-                    "overrides" : {
-                      "children" : {
-                        "USDScene" : {
-                          "overrides" : {
-                            "arguments" : [
-                              [
-                                "includeSceneScaling",
-                                {
-                                  "typeName" : "Bool",
-                                  "value" : false
-                                }
-                              ],
-                              [
-                                "subpath",
-                                {
-                                  "typeName" : "String",
-                                  "value" : ""
-                                }
-                              ],
-                              [
-                                "url",
-                                {
-                                  "typeName" : "String",
-                                  "value" : "model:e0ceb0be7404abd286920335d723ac6f\/Firework_Model.usdz"
-                                }
-                              ],
-                              [
-                                "withDescendants",
-                                {
-                                  "typeName" : "Bool",
-                                  "value" : true
-                                }
-                              ]
-                            ],
-                            "factory" : {
-                              "identifier" : "com.apple.af.FileImportAssetFactory",
-                              "version" : "0.0"
-                            },
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "370FDA6E-C42D-4E7B-AA7E-DCC74FB1EF19"
-                                }
-                              ]
-                            ]
-                          },
-                          "transform" : {
-                            "matrix" : [
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              1
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.af.Group",
-                        "version" : "0.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "7477E312-7328-4C7E-A705-91A2C00F4B3E"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        0.058178450912237167,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0.058178450912237167,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0.058178450912237167,
-                        0,
-                        0,
-                        -0.87656867504119873,
-                        0,
-                        1
-                      ]
-                    }
-                  },
+                  "9906A27D-01EA-453B-ABEA-3CAAAE8DF0EF" : null,
                   "C39E27DC-9FBB-4130-B1A1-143DB2540991" : {
                     "overrides" : {
                       "arguments" : [
@@ -1378,21 +1273,21 @@
               "title" : "Scene",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.769481360912323,
-                  -2.1205600830853655e-08,
-                  0.63866937160491943,
+                  0.57100790739059448,
+                  -2.2172846669832325e-08,
+                  0.82094454765319824,
                   0,
-                  0.42770817875862122,
-                  0.74264407157897949,
-                  -0.51531112194061279,
+                  0.56560933589935303,
+                  0.72478628158569336,
+                  -0.39340940117835999,
                   0,
-                  -0.47430366277694702,
-                  0.66968649625778198,
-                  0.57145082950592041,
+                  -0.59500908851623535,
+                  0.68897396326065063,
+                  0.41385892033576965,
                   0,
-                  -0.31808531284332275,
-                  0.76857674121856689,
-                  0.18458805978298187,
+                  -0.39613470435142517,
+                  0.73974263668060303,
+                  0.32288002967834473,
                   1
                 ],
                 "sceneTransform" : [

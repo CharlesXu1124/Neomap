@@ -239,7 +239,10 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                 
                 if middleFingerAndThumbTipDistance < 0.05 && !toReact {
                     print("action detected")
-                    toReact = true
+                    
+                    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                        self.toReact = true
+                    }
                     // show up all the commenting signs
                     posterAnchor.notifications.showLikeSign.post()
                     
@@ -276,11 +279,11 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                         print("dislike")
                         disLikeCounts += 1
                     }
-                    if likeCounts == 5 {
+                    if likeCounts == 10 {
                         likeCounts = 0
                         print("like")
                     }
-                    if disLikeCounts == 5 {
+                    if disLikeCounts == 30 {
                         disLikeCounts = 0
                         print("dislike")
                     }
