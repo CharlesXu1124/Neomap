@@ -35,6 +35,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     var configuration = ARWorldTrackingConfiguration()
     var posterAnchor: Poster.Scene!
     
+    // counting the total number of consecutive detections
     var likeCounts: Int! = 0
     var disLikeCounts: Int! = 0
     var giftCounts: Int! = 0
@@ -52,8 +53,6 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     
     
     
-    //private var evidenceBuffer = [HandGestureProcessor.PointsPair]()
-    //private var lastDrawPoint: CGPoint?
     private var isFirstSegment = true
     //private var lastObservationTimestamp = Date()
     
@@ -205,13 +204,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     }
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        var thumbTip: CGPoint?
-        var indexTip: CGPoint?
-        var ringTip: CGPoint?
-        
-        let width = screenSize.width
-        let height = screenSize.height
-        
+
         counter += 1
         
         let handler = VNImageRequestHandler(cvPixelBuffer: frame.capturedImage, orientation: .up, options: [:])
@@ -232,12 +225,12 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                     return
                 }
                 
-                let middleFingerAndThumbTipDistance = abs(thumbTipPoint.location.x - indexTipPoint.location.x) + abs(thumbTipPoint.location.y - indexTipPoint.location.y)
+                let indexFingerAndThumbTipDistance = abs(thumbTipPoint.location.x - indexTipPoint.location.x) + abs(thumbTipPoint.location.y - indexTipPoint.location.y)
                 
                 // print out the manhattan distance between thumb and index tips
                 // print("difference: \(middleFingerAndThumbTipDistance)")
                 
-                if middleFingerAndThumbTipDistance < 0.05 && !toReact {
+                if indexFingerAndThumbTipDistance < 0.05 && !toReact {
                     print("action detected")
                     
                     Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
@@ -248,29 +241,11 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                     
                 }
                 
-                let likePosition = SIMD3<Float>(
-                    likeEntity.position.x,
-                    likeEntity.position.y,
-                    likeEntity.position.z
-                )
-                
-                let giftPosition = SIMD3<Float>(
-                    giftEntity.position.x,
-                    giftEntity.position.y,
-                    giftEntity.position.z
-                )
-                
-                let dislikePosition = SIMD3<Float>(
-                    dislikeEntity.position.x,
-                    dislikeEntity.position.y,
-                    dislikeEntity.position.z
-                )
-                
                 
                 let thumbX = thumbTipPoint.location.x
                 let indexX = indexTipPoint.location.x
                 // user ready to add their reactions
-                if toReact && middleFingerAndThumbTipDistance > 0.05{
+                if toReact && indexFingerAndThumbTipDistance > 0.05{
                     
                     
                     if thumbX < indexX - 0.05{
@@ -298,9 +273,6 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                     }
                 }
                 
-                thumbTip = CGPoint(x: thumbTipPoint.location.x, y: 1 - thumbTipPoint.location.y)
-                indexTip = CGPoint(x: indexTipPoint.location.x, y: 1 - indexTipPoint.location.y)
-                ringTip = CGPoint(x: ringTipPoint.location.x, y: 1 - ringTipPoint.location.y)
             }
         } catch {
 
