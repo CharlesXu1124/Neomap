@@ -96,6 +96,7 @@
             <connections>
                 <outlet property="captionField" destination="t1D-2F-HDz" id="xIK-Ic-9xq"/>
                 <outlet property="locationField" destination="4qp-ga-3AX" id="ZFB-Fs-0bF"/>
+                <outlet property="playButton" destination="Ag0-8H-kx6" id="Ecl-Z3-wFY"/>
                 <outlet property="postImage" destination="B9G-sT-nxf" id="ZDJ-mV-rXR"/>
                 <outlet property="postTimeField" destination="Ayg-7j-goz" id="8I5-Nd-lZm"/>
             </connections>

@@ -24,6 +24,7 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
 
     let db = Firestore.firestore()
     var post: [Post] = []
+    var selectedCells: [PostCell] = []
     
     @IBOutlet weak var postInfoTable: UITableView!
     
@@ -35,9 +36,16 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
         // Unselect the row, and instead, show the state with a checkmark.
         tableView.deselectRow(at: indexPath, animated: false)
         
-        guard postInfoTable.cellForRow(at: indexPath) != nil else { return }
+        guard let cellSelected = postInfoTable.cellForRow(at: indexPath) as? PostCell else { return }
         
+        // deselect all the other cells
+        for selectedCell in selectedCells {
+            selectedCell.playButton.isHidden = true
+        }
         
+        // append the selected cell to the selection list
+        selectedCells.append(cellSelected)
+        cellSelected.playButton.isHidden = false
         
         // Update the selected item to indicate whether the user packed it or not.
         let item = post[indexPath.row]
@@ -97,7 +105,8 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
                     //print("\(document.documentID) => \(document.data())")
                     
                     DispatchQueue.main.async {
-                        if document.data()["username"] as? String == username {
+                        // document.data()["username"] as? String == username
+                        if  true{
                             let location = document.data()["location"]! as? String
                             let caption = document.data()["caption"]! as? String
                             let postTime = document.data()["postTime"] as? Double

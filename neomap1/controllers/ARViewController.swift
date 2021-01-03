@@ -240,7 +240,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                 if middleFingerAndThumbTipDistance < 0.05 && !toReact {
                     print("action detected")
                     
-                    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                    Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
                         self.toReact = true
                     }
                     // show up all the commenting signs
@@ -267,25 +267,34 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                 )
                 
                 
-                
+                let thumbX = thumbTipPoint.location.x
+                let indexX = indexTipPoint.location.x
                 // user ready to add their reactions
-                if toReact {
-                    let thumbX = thumbTipPoint.location.x
-                    let indexX = indexTipPoint.location.x
+                if toReact && middleFingerAndThumbTipDistance > 0.05{
                     
-                    if thumbX < indexX {
+                    
+                    if thumbX < indexX - 0.05{
                         likeCounts += 1
-                    } else {
-                        print("dislike")
+                    } else if thumbX > indexX + 0.05 {
                         disLikeCounts += 1
                     }
-                    if likeCounts == 10 {
+                    if likeCounts == 5 {
                         likeCounts = 0
+                        // perform like actions
                         print("like")
                     }
-                    if disLikeCounts == 30 {
+                    if disLikeCounts == 5 {
                         disLikeCounts = 0
+                        // perform dislike actions
                         print("dislike")
+                    }
+                    
+                    
+                } else if toReact {
+                    giftCounts += 1
+                    if giftCounts == 5 {
+                        giftCounts = 0
+                        print("gift")
                     }
                 }
                 

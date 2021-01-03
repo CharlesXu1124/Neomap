@@ -31,8 +31,10 @@ class PostCell: UITableViewCell{
     
     var delegate: ARDisplayDelegate?
 
+    @IBOutlet weak var playButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
+        playButton.isHidden = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
