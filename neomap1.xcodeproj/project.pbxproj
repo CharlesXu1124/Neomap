@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1361C3B74377D9813069734D /* Pods_neomap1_neomap1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7382535DF1656BA8D74EFEC /* Pods_neomap1_neomap1UITests.framework */; };
+		149AF0AD25A14C60003C7FBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149AF0AC25A14C60003C7FBC /* GoogleService-Info.plist */; };
 		14AF04DC259AA2AD00492A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF04DB259AA2AD00492A0E /* AppDelegate.swift */; };
 		14AF04DE259AA2AD00492A0E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF04DD259AA2AD00492A0E /* ARViewController.swift */; };
 		14AF04E3259AA2AD00492A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AF04E1259AA2AD00492A0E /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		4B6C0935259E622800553576 /* Poster.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C0934259E622800553576 /* Poster.rcproject */; };
 		4B6C093E259E62DA00553576 /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C093D259E62DA00553576 /* HandGestureProcessor.swift */; };
 		4B6C097625A0072D00553576 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C097525A0072B00553576 /* placeholder.jpg */; };
-		4B97C65D25A1178F00939609 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B97C65C25A1178F00939609 /* GoogleService-Info.plist */; };
 		660E7FE30A6170B3D9B0A1B1 /* Pods_neomap1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F172C79FE71BD1E2E7C4D56F /* Pods_neomap1.framework */; };
 		99CD03930BF4EB4FD8F7A320 /* Pods_neomap1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A22AA7614E473AF76237E89 /* Pods_neomap1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0F94707910568559474901B7 /* Pods-neomap1-neomap1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-neomap1-neomap1UITests.debug.xcconfig"; path = "Target Support Files/Pods-neomap1-neomap1UITests/Pods-neomap1-neomap1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		149AF0AC25A14C60003C7FBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14AF04D8259AA2AD00492A0E /* neomap1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neomap1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AF04DB259AA2AD00492A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14AF04DD259AA2AD00492A0E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		4B6C093C259E62D200553576 /* HandPose.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HandPose.entitlements; sourceTree = "<group>"; };
 		4B6C093D259E62DA00553576 /* HandGestureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandGestureProcessor.swift; sourceTree = "<group>"; };
 		4B6C097525A0072B00553576 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
-		4B97C65C25A1178F00939609 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A22AA7614E473AF76237E89 /* Pods_neomap1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_neomap1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8333558984D39A53C9752FC1 /* Pods-neomap1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-neomap1.release.xcconfig"; path = "Target Support Files/Pods-neomap1/Pods-neomap1.release.xcconfig"; sourceTree = "<group>"; };
 		8E5A5B2C4F4C2B010089BE38 /* Pods-neomap1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-neomap1.debug.xcconfig"; path = "Target Support Files/Pods-neomap1/Pods-neomap1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 				14AF04DB259AA2AD00492A0E /* AppDelegate.swift */,
 				14AF04E4259AA2AE00492A0E /* Assets.xcassets */,
 				4B6C097525A0072B00553576 /* placeholder.jpg */,
+				149AF0AC25A14C60003C7FBC /* GoogleService-Info.plist */,
 				4B6C0934259E622800553576 /* Poster.rcproject */,
 				14AF04E9259AA2AE00492A0E /* Info.plist */,
-				4B97C65C25A1178F00939609 /* GoogleService-Info.plist */,
 				4B6C093C259E62D200553576 /* HandPose.entitlements */,
 				4B6C093D259E62DA00553576 /* HandGestureProcessor.swift */,
 				4B6C090F259D577400553576 /* Models */,
@@ -339,7 +339,7 @@
 				14AF04E5259AA2AE00492A0E /* Assets.xcassets in Resources */,
 				14AF04E3259AA2AD00492A0E /* Main.storyboard in Resources */,
 				4B6C097625A0072D00553576 /* placeholder.jpg in Resources */,
-				4B97C65D25A1178F00939609 /* GoogleService-Info.plist in Resources */,
+				149AF0AD25A14C60003C7FBC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,14 +688,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = neomap1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,14 +709,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = neomap1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
