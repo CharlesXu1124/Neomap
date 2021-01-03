@@ -105,8 +105,8 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
                     //print("\(document.documentID) => \(document.data())")
                     
                     DispatchQueue.main.async {
-                        // document.data()["username"] as? String == username
-                        if  true{
+                        //
+                        if  document.data()["username"] as? String == username{
                             let location = document.data()["location"]! as? String
                             let caption = document.data()["caption"]! as? String
                             let postTime = document.data()["postTime"] as? Double
