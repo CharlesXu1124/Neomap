@@ -31,90 +31,6 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
-                                          "animationSpeed" : 1,
-                                          "audioGain" : 1,
-                                          "clipDuration" : 0,
-                                          "clipStart" : 0,
-                                          "iterations" : 1,
-                                          "multiplePerformType" : "ignore request",
-                                          "muteAudio" : false,
-                                          "reversed" : false,
-                                          "reverses" : false,
-                                          "target" : [
-
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "startAnimate"
-                                        }
-                                      },
-                                      "identifier" : "11DD1F7F-F594-4157-B7F6-5174C3CAB265",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "DF002FA0-C299-4605-AE78-AB98C3097997",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ],
-                      "color" : [
-                        0.364705890417099,
-                        0.74117648601531982,
-                        0.69019609689712524,
-                        1
-                      ],
-                      "identifier" : "644636F8-D925-480D-B819-94B32AE98BEE",
-                      "isEnabled" : true,
-                      "isLooping" : true,
-                      "isModal" : false,
-                      "name" : "fireworks",
-                      "triggers" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurationBox" : {
-                                "configuration" : {
-
-                                },
-                                "name" : "start"
-                              },
-                              "identifier" : "6F15F13E-7124-412C-A22C-157EACFC3F69",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ]
-                    }
-                  ],
-                  "__version" : 3
-                },
-                {
-                  "__content" : [
-                    {
-                      "accessibility" : {
-                        "__content" : [
-                          {
-                            "isEnabled" : false
-                          }
-                        ],
-                        "__version" : 1
-                      },
-                      "actionGroups" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildOutAnimationType" : "none",
@@ -256,6 +172,243 @@
                                 "name" : "custom"
                               },
                               "identifier" : "ED915D83-9FC6-487D-B036-08FB6D5D39D3",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "animationStyle" : "basic",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "pop",
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "9D83A5F3-F423-4061-A0B6-44BFAC952EEE"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "emphasis"
+                                        }
+                                      },
+                                      "identifier" : "17B57BB3-E24E-433B-921E-64308CE53F72",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "74ACBAA4-D88C-471B-9E97-7C432E39B74A",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "2221FFA7-6401-4649-83CE-1BB3C28AB3A7",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "highlightLike",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "highlightLike"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "3355EF15-D823-429F-9340-28A35CEF12A5",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "animationStyle" : "basic",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "pop",
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "C123CA4C-9005-4541-BCE8-CA2C6128C4E8"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "emphasis"
+                                        }
+                                      },
+                                      "identifier" : "40D45259-01D9-45F3-A187-10BE24367A61",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "7D758776-072F-4557-806D-CB8AC9100875",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.30980393290519714,
+                        0.56470590829849243,
+                        0.99215686321258545,
+                        1
+                      ],
+                      "identifier" : "8772DD09-55B4-45FA-B23B-8EE4FFF93BB8",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "highlightDislike",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "highlightDislike"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "C6E574BD-06D5-4CCD-BD64-494113062331",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "animationStyle" : "basic",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "pop",
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "8A980F76-EF8D-485C-A211-99B09FCC0FE4"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "emphasis"
+                                        }
+                                      },
+                                      "identifier" : "52A2856C-AAF5-41AD-987E-E6F57C58559B",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "63EDA456-AE58-4597-B717-FF50B13E86BC",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.56078433990478516,
+                        0.47058823704719543,
+                        0.80392158031463623,
+                        1
+                      ],
+                      "identifier" : "FFBE5693-63F6-4186-A91D-A5D1F181E86A",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "highlightGift",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "highlightGift"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "31FACDFA-E432-4200-9FCD-D0F305BDA7F4",
                               "isEnabled" : true
                             }
                           ],

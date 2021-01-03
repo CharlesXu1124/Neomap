@@ -253,21 +253,41 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                     } else if thumbX > indexX + 0.05 {
                         disLikeCounts += 1
                     }
-                    if likeCounts == 5 {
+                    if likeCounts == 5 && !hasReacted{
                         likeCounts = 0
                         // perform like actions
+                        hasReacted = true
+                        posterAnchor.notifications.highlightLike.post()
+                        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                            self.hasReacted = false
+                            
+                        }
+                        
                         print("like")
                     }
-                    if disLikeCounts == 5 {
+                    if disLikeCounts == 5 && !hasReacted{
                         disLikeCounts = 0
                         // perform dislike actions
+                        hasReacted = true
+                        posterAnchor.notifications.highlightDislike.post()
+                        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                            self.hasReacted = false
+                            
+                        }
+                        
                         print("dislike")
                     }
                     
                     
-                } else if toReact {
+                } else if toReact{
                     giftCounts += 1
-                    if giftCounts == 5 {
+                    if giftCounts == 5 && !hasReacted{
+                        hasReacted = true
+                        posterAnchor.notifications.highlightGift.post()
+                        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                            self.hasReacted = false
+                            
+                        }
                         giftCounts = 0
                         print("gift")
                     }
